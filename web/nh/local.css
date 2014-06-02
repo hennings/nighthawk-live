@@ -1,0 +1,28 @@
+.time-behind {
+    text-align: right;
+}
+
+.section {
+ margin-bottom: 60px;
+}
+
+table td,th {
+    padding: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+tr.team-result-changeover {
+    background-color: #f9f9f9;
+    font-weight: bold;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 780px;
+}
+
+body {
+  font-size: 12px;
+}

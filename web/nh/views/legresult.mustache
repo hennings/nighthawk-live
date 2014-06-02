@@ -1,0 +1,46 @@
+{{> header }}
+
+<div class="container">
+<h1>Leg results {{class}} at leg {{leg}}</h1>
+
+{{> overview }}
+
+<table class="table table-striped table-bordered table-responsive table-condensed">
+  <tr>
+   <th>rank</th>
+   <th>team bib</th>
+   <th>runner</th>
+   <th>time</th>
+   <th class="time-behind"></th>
+   <th>club</th>
+</tr>
+
+{{#res}}
+
+ {{#RestartFlag}} 
+ <tr><td colspan="100%">Restart {{RestartFlag}}</td></tr>
+ {{/RestartFlag}}
+
+ <tr>
+  <td>{{Rank}}</td>
+  <td><a href="{{base}}/{{raceId}}/{{class}}/team/{{TeamId}}">{{TeamId}}</a></td>
+  <td>{{Name}}</td>
+  <td>{{Timestr}}</td>
+  <td class="time-behind">{{Behind}}</td> 
+  <td>{{Club}}</td>
+ </tr>
+{{/res}}
+
+</table>
+
+<div>
+<a href="/emmanh/nh/10004/NightHawk+Men/listall">status page with all teams</a>
+</div>
+
+
+</div>
+
+
+
+{{> footer }}
+
