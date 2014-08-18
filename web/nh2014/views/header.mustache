@@ -1,0 +1,21 @@
+{{> header_clean }}
+
+<div class="container">
+
+{{#class}}
+ <div class="navbar navbar-default" role="navigation">
+<h4><a href="{{base}}/{{raceId}}/{{class}}/">Overview</a>&nbsp;&nbsp;
+<a href="{{base}}/{{raceId}}/{{class}}/teams">Teams</a></strong></h4>{{/class}}
+        {{#menu}}
+{{Leg}}th leg:
+        {{#splits}}
+	  {{^hidden}}
+	  <a href="{{base}}/{{raceId}}/{{class}}/result/{{Leg}}/{{nr}}">{{SplitWhere}}</a>&nbsp;&nbsp;
+	  {{/hidden}}
+             {{/splits}}
+        <a href="{{base}}/{{raceId}}/{{class}}/result/{{Leg}}/{{finish}}">{{Where}}</a>&nbsp;&nbsp;
+        <a href="{{base}}/{{raceId}}/{{class}}/legresult/{{Leg}}">Leg result</a>
+        {{/menu}}
+{{#class}}
+</div>{{/class}}
+</div>

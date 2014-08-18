@@ -1,0 +1,23 @@
+{{> header }}
+
+<div class="container">
+{{> overview }}
+
+<h2 id="heading">{{persres.team}} {{runner.Club}}</h2>
+
+
+<table class="table table-bordered table-responsive table-condensed">
+<tr><td>Runner</td><td>{{persres.name}}</td></tr>
+<tr><td>Team</td><td>{{persres.team}} {{runner.Club}}</td></tr>
+<tr><td>Leg</td><td>{{persres.leg}}</td></tr>
+<tr><td>Class</td><td>{{persres.class}}</td></tr>
+<tr><td>Course</td><td>{{persres.courseName}}</td></tr>
+</table>
+
+<table class="table table-bordered table-responsive table-condensed">
+<tr><th></th><th></th><th colspan="2">Time</th><th>Rank in leg</th><th colspan="2">Split time</th><th>Rank</th><th>Dist</th><th>min/km</th></tr>
+{{#persres.splits}}
+<tr><td>{{nr}}</td><td>{{code}}</td><td class="text-right">{{tothms}}</td><td class="text-right">{{totdiffhms}}</td><td>{{totpos}}</td><td class="text-right">{{splithms}}</td><td class="text-right">{{splitdiffhms}}</td><td>{{splitpos}}</td><td>{{#dist}}{{dist}} m{{/dist}}</td><td class="text-right">{{#speed}}{{speed}} min/km{{/speed}}</td></tr>
+{{/persres.splits}}
+</table>
+

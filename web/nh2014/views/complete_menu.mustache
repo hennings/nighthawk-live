@@ -1,0 +1,20 @@
+{{#config}}
+  {{#menus}}
+<!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <b class="caret">{{class}}</a>-->
+<h5><a href="{{base}}/{{raceId}}/{{class}}/">{{className}}</a></h5>
+<table class="table table-bordered table-condensed">
+<tr>
+        {{#menu}}
+        <td valign="top"><a href="{{base}}/{{raceId}}/{{class}}/result/{{Leg}}/{{finish}}">{{Leg}}.{{Where}}</a><br/>
+        {{#splits}}
+	  {{^hidden}}
+	  &nbsp;&nbsp;&nbsp;-&nbsp;<a href="{{base}}/{{raceId}}/{{class}}/result/{{Leg}}/{{nr}}">{{SplitWhere}}</a><br/>
+	  {{/hidden}}
+             {{/splits}}
+<a href="{{base}}/{{raceId}}/{{class}}/legresult/{{Leg}}">Legresult</a><br/>
+</td>
+        {{/menu}}
+</tr>
+      </table>
+{{/menus}}
+{{/config}}

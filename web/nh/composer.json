@@ -1,7 +1,0 @@
-{
-    "require": {
-        "mustache/mustache": "~2.5",
-	"slim/slim": "2.*"
-    }
-}
-

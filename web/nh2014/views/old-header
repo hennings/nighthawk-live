@@ -1,0 +1,19 @@
+{{#config}}
+  {{#menus}}
+    <li>
+<!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <b class="caret">{{class}}</a>-->
+{{class}}
+      <ul>
+        {{#menu}}
+        <li><a href="{{base}}/{{raceId}}/{{class}}/result/{{Leg}}/{{finish}}">{{Leg}} {{Where}}</a>
+        <ul>{{#splits}}
+	  {{^hidden}}
+	  <li><a href="{{base}}/{{raceId}}/{{class}}/result/{{Leg}}/{{nr}}">{{SplitWhere}}</a></li>
+	  {{/hidden}}
+             {{/splits}}
+	</ul></li>
+        {{/menu}}
+      </ul>
+     </li>
+{{/menus}}
+{{/config}}
